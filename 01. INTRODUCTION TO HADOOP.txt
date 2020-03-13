@@ -1,0 +1,233 @@
+Introduction to Big Data
+
+We live in a DATA DRIVEN world! We can also say a data world!
+IDC or International data co-operation estimated the size of the digital universe at 
+0.18 zb – 2006
+1.8 zb – 2011
+4.4 zb – 2013
+44 zb – 2020
+
+byte
+kilobyte	– kb
+megabyte 	– mb
+gigabyte 	– gb
+terabyte 	– tb
+petabyte 	– pb
+Exabyte 	– eb
+Zettabyt 	– zb	– 10^21
+Yottabyte 	– yb	- 10^24
+
+New York stock ex generates 4 – 5 tb of data every day
+Fb host 240 billion photos every day
+Sensors, cctv, social media etc
+Previously photos were of few kb and now mbs
+The problem is very simple :  storage kept increasing but the rate of reading or processing the same data 
+did not increase with respect to the storage.
+meaning the storage kept on increase however the rate at which the data can be read from the disk or drive have not
+kept on.
+
+1990 - 1370mb data with transfer rate 4.4mb/s - 5min
+after 25yr 1-tb data with transfer rate 100mb/s - 2.5hr to read the whole data.
+
+Chac of Big data -  5 V's | vol,velocity,variety given by IBM
+1.	volume		
+2.	velocity	
+3.	variety
+4.	varacity
+5.	value
+
+typs of data - strutured , semi - strutured, un-strutured
+70% data is semi or un-strutured
+
+History of HADOOP--
+
+Google in 1990 started thinking about how to store huge data.
+after 13yr in 2003 they cameup with GFS(google file system) storage.
+2004 they came up with MapReduce - processing
+they gave out the papaers for GFS and MR but did not implement.
+
+next Yahoo - 2006-07 - introduced HDFS
+			 2007-08 - MapReduce
+Yahoo use the google papers and came up with a conclustion of HDFS and MapReduce.
+
+Big Data and Hadoop evolution⌘
+2003 - GFS (Google File System) publication, available here
+2004 - Google MapReduce publication, available here
+2005 - Hadoop project founded
+2006 - Google BigTable publication, available here
+2008 - First Hadoop implementation
+2010 - Google Dremel publication, available here
+2010 - First HBase implementation
+2012 - Apache Hadoop YARN project founded
+2013 - Cloudera releases Impala
+2014 - Apache releases Spark
+
+Core concept of HADOOP--
+
+Doug cutting:- Founder of HADOOP--
+Hadoop was created by Doug Cutting in order to build his search engine called Nutch. He was joined by Mike Cafarella. 
+Hadoop was based on the three papers published by Google: Google File System, Google MapReduce, and Google Big Table.
+Logo story - Elephant
+
+Hadoop is under Apache license which means you can use it anywhere without having to worry about licensing.
+
+Hadoop distributions⌘
+Apache Hadoop, http://hadoop.apache.org/
+CDH (Cloudera Distribution including apache Hadoop), http://www.cloudera.com/
+HDP (Hortonworks Data Platform), http://hortonworks.com/
+M3, M5 and M7, http://www.mapr.com/
+Amazon Elastic MapReduce, https://aws.amazon.com/elasticmapreduce/
+BigInsights Enterprise Edition, http://www.ibm.com/
+Intel Distribution for Apache Hadoop, http://hadoop.intel.com/
+And more ...
+
+
+Hadoop automated deployment tools⌘
+Cloudera Manager, https://www.cloudera.com/products/cloudera-manager.html
+Apache Ambari, https://ambari.apache.org/
+MapR Control System, http://doc.mapr.com/display/MapR/MapR+Control+System
+VMware Big Data Platform, https://www.vmware.com/products/big-data-extensions
+OpenStack Sahara, https://wiki.openstack.org/wiki/Sahara
+Amazon Elastic MapReduce, https://aws.amazon.com/elasticmapreduce/
+HDInsight, https://azure.microsoft.com/en-us/services/hdinsight/
+Hadoop on Google Cloud Platform, https://cloud.google.com/hadoop/
+
+Goals and motivation⌘
+
+Very large files:
+file sizes larger than tens of terabytes
+filesystem sizes larger than tens of petabytes
+
+Streaming data access:
+write-once, read-many-times approach
+optimized for batch processing
+
+Fault tolerance:
+data replication
+metadata high availability
+
+Scalability:
+commodity hardware
+horizontal scalability
+
+Resilience:
+components failures are common
+auto-healing feature
+Support for MapReduce data processing paradigm
+
+
+
+Defination of BigData - BigData is a term for a collection of data set so large and complex that it becomes
+						difficult to process using traditional database or data management system.
+						
+						
+						
+HADOOP Eco-System :- 
+HDFS
+HDFS or Hadoop Distributed File System is the most important component because the entire 
+eco-system depends upon it. It is based on Google File System.
+
+It is basically a file system which runs on many computers to provide a humongous storage. 
+If you want to store your petabytes of data in the form of files, you can use HDFS.
+
+YARN or yet another resource negotiator keeps track of all the resources (CPU, Memory) 
+of machines in the network and run the applications. Any application which wants to run 
+in distributed fashion would interact with YARN.
+
+HBase
+HBase provides humongous storage in the form of a database table. So, to manage humongous 
+records, you would like to use HBase.
+
+HBase is a kind NoSQL Datastore.
+
+MapReduce
+MapReduce is a framework for distributed computing. It utilizes YARN to execute programs 
+and has a very good sorting engine.
+
+You write your programs in two parts Map and reduce. The map part transforms the raw data 
+into key-value and reduce part groups and combines data based on the key. We will learn 
+MapReduce in details later.
+
+Spark
+Spark is another computational framework similar to MapReduce but faster and more recent. 
+It uses similar constructs as MapReduce to solve big data problems.
+
+Spark has its own huge stack. We will cover in details soon.
+
+Hive
+Writing code in MapReduce is very time-consuming. So, Apache Hive makes it possible 
+to write your logic in SQL which internally converts it into MapReduce. So, you can 
+process humongous structured or semi-structured data with simple SQL using Hive.
+
+Pig (Latin)
+Pig Latin is a simplified SQL like language to express your ETL needs in stepwise fashion. 
+Pig is the engine that translates Pig Latin into Map Reduce and executes it on Hadoop.
+
+Mahout
+Mahout is a library of machine learning algorithms that run in a distributed fashion. 
+Since machine learning algorithms are complex and time-consuming, mahout breaks down 
+work such that it gets executed on MapReduce running on many machines.
+
+ZooKeeper
+Apache Zookeeper is an independent component which is used by various distributed 
+frameworks such as HDFS, HBase, Kafka, YARN. It is used for the coordination between 
+various components. It provides a distributed configuration service, synchronization 
+service, and naming registry for large distributed systems.
+
+Flume
+Flume makes it possible to continuously pump the unstructured data from many 
+sources to a central source such as HDFS.
+
+If you have many machines continuously generating data such as Webserver Logs, 
+you can use flume to aggregate data at a central place such as HDFS.
+
+SQOOP
+Sqoop is used to transport data between Hadoop and SQL Databases. 
+Sqoop utilizes MapReduce to efficiently transport data using many machines in a network.
+
+Oozie
+Since a project might involve many components, there is a need of a workflow engine to execute work in sequence.
+
+For example, a typical project might involve importing data from SQL Server, 
+running some Hive Queries, doing predictions with Mahout, Saving data back to an SQL Server.
+
+This kind of workflow can be easily accomplished with Oozie.
+
+User Interaction
+A user can either talk to the various components of Hadoop using Command Line 
+Interface, Web interface, API or using Oozie.
+
+We will cover each of these components in details later.
+
+
+Core concept of HADOOP--
+
+Hadoop - Hadoop is a frame work that allows us to store and process large data sets in parallel and distributed 
+		 fashion
+
+HDFS and MapReduce!
+
+Hdfs - Allows to store or dump any data across the cluster.
+MapReduce - Allows parallel processing of the stored data in HDFS.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
